@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Application</title>
+    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.js">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<template id="welcome_template">
+    <div class="row">
+        <div class="col">
+        </div>
+        <div class="col">
+            <h2>SignIn</h2>
+            <form class="form" onsubmit="javascript: signIn(event);">
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" name="email" class="form-control" placeholder="Enter email.">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" name="password" class="form-control" placeholder="Enter password.">
+                </div>
+                <button type="submit" class="btn btn-primary">Sign In</button>
+            </form>
+        </div>
+        <div class="col">
+        </div>
+        <div class="col">
+        </div>
+    </div>
+</template>
+
+<body>
+    <div id="view"></div>
+    <script type="text/javascript" src="/assets/js/router.js"></script>
+    <script type="text/javascript" src="/assets/js/script.js"></script>
+    <script type="text/javascript" src="/assets/js/user.js"></script>
+    <script type="text/javascript" src="/assets/js/messages.js"></script>
+    <script type="text/javascript" src="/assets/js/groups.js"></script>
+</body>
+
+</html>
