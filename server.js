@@ -7,7 +7,7 @@ const path = require('path');
 
 const app = express();
 
-const dbName = 'db_groups';
+const dbName = 'dc_groups';
 
 const url = "mongodb://localhost:27017";
 var db;
@@ -34,7 +34,7 @@ app.use(function(req, res, next) {
 });
 
 app.post("/api/users/signin", users.signin);
-
+app.post("/api/users/signup", users.signup);
 
 app.listen(3000, function() {
     console.log("Server is running at port 3000");
