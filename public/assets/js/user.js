@@ -47,3 +47,13 @@ function signUp(event) {
             console.log(error);
         })
 }
+
+function isSigned() {
+    if (localStorage.getItem("user") == null) {
+        return false;
+    }
+    user = JSON.parse(localStorage.getItem("user"));
+    return true;
+}
+
+let user = {};
