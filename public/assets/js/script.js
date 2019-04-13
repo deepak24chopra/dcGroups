@@ -26,7 +26,6 @@ function loadGroup(params) {
         window.location = "/#/welcome";
         return;
     }
-    console.log(params.id);
     document.getElementById("view").innerHTML = document.getElementById("group_template").innerHTML;
 }
 
