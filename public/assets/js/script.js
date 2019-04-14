@@ -10,15 +10,26 @@ function loadHome() {
         window.location = "/#/welcome";
         return;
     }
-    getGroups()
+    document.getElementById("view").innerHTML = document.getElementById("home_template").innerHTML;
+    //get groups
+    getOpenGroups()
         .then(function(data) {
             groups = data;
-            showGroups();
+            showOpenGroups();
         })
         .catch(function(error) {
             console.log(error);
         });
-    document.getElementById("view").innerHTML = document.getElementById("home_template").innerHTML;
+    getOwnGroups()
+        .then(function(data) {
+            ownGroups = data;
+            showOwnGroups();
+        })
+        .catch(function(error) {
+            console.log(error);
+        });
+    //show profile function
+    showProfile();
 }
 
 function loadGroup(params) {

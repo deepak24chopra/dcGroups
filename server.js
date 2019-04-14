@@ -35,7 +35,9 @@ app.use(function(req, res, next) {
 
 app.post("/api/users/signin", users.signin);
 app.post("/api/users/signup", users.signup);
-app.get("/api/groups/:email", groups.getgroups);
+app.get("/api/groups/:email", groups.getopengroups);
+app.post("/api/groups/own", groups.getowngroups);
+app.post("/api/groups/create", groups.create);
 
 app.listen(3000, function() {
     console.log("Server is running at port 3000");

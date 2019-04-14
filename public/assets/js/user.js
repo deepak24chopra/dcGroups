@@ -56,4 +56,11 @@ function isSigned() {
     return true;
 }
 
+function showProfile() {
+    document.getElementById("profile").innerHTML = "";
+    let el = document.createElement("div");
+    el.innerHTML = `<h4>${user.name}</h4><br><h4>${user.email}</h4>`;
+    document.getElementById("profile").appendChild(el);
+}
+
 let user = {};

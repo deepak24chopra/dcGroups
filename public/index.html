@@ -9,8 +9,6 @@
 <template id="welcome_template">
     <div class="row">
         <div class="col">
-        </div>
-        <div class="col">
             <h2>SignIn</h2>
             <form class="form" onsubmit="javascript: signIn(event);">
                 <div class="form-group">
@@ -42,21 +40,43 @@
                 <button type="submit" class="btn btn-primary">Sign Up</button>
             </form>
         </div>
-        <div class="col">
-        </div>
     </div>
 </template>
 <!-- HOME TEMPLATE -->
 <template id="home_template">
-    Welcome Home
-    <div id="groups"></div>
+    <div class="row">
+        <div class="col">
+            <div id="profile"></div>
+        </div>
+        <div class="col">
+            <h2>Open Groups</h2>
+            <div id="openGroups"></div>
+        </div>
+        <div class="col">
+            <h2>Own Groups</h2>
+            <div id="ownGroups"></div>
+        </div>
+        <div class="col">
+            <h2>Create Group</h2>
+            <form class="form" onsubmit="javascript: createGroup(event);">
+                <div class="form-group">
+                    <label>Group Name:</label>
+                    <input type="text" name="name" class="form-control" placeholder="Group name.">
+                </div>
+                <button type="submit" class="btn btn-primary">Create Group</button>
+            </form>
+        </div>
+    </div>
 </template>
+<!-- GROUP TEMPLATE -->
 <template id="group_template">
     Welcome group
 </template>
 
 <body>
-    <div id="view"></div>
+    <div class="container">
+        <div id="view"></div>
+    </div>
     <script type="text/javascript" src="/assets/js/router.js"></script>
     <script type="text/javascript" src="/assets/js/script.js"></script>
     <script type="text/javascript" src="/assets/js/user.js"></script>
