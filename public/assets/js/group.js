@@ -79,17 +79,11 @@ function showMembers() {
 
 }
 
-function getMembers() {
-
-}
 
 function showDetails() {
 
 }
 
-function getDetails() {
-    
-}
 
 let groups = [];
 let ownGroups = [];
