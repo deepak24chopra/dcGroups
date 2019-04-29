@@ -75,15 +75,30 @@ function createGroup(event) {
         });
 }
 
-function showMembers() {
-
+function groupDetail(groupId) {
+    fetch("/api/groups/getgroup", {
+            method: "post",
+            headers: {
+                "content-type": "application/json; charset=UTF-8"
+            },
+            body: `{groupId : "${groupId}"}`
+        }).then(function(data) {
+            if (data.status == 404) {
+                console.log("API not found");
+                return;
+            }
+            return data;
+        }).then(function(data) {
+            return data.json();
+        }).then(function(data) {
+            group = data;
+        })
+        .catch(function(error) {
+            console.log(error);
+        })
 }
 
 
-function showDetails() {
-
-}
-
-
+let group = {};
 let groups = [];
 let ownGroups = [];

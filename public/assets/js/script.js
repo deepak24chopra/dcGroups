@@ -38,6 +38,13 @@ function loadGroup(params) {
         return;
     }
     document.getElementById("view").innerHTML = document.getElementById("group_template").innerHTML;
+    groupDetail(params.id);
+    if (group.members.includes(user.email)) {
+
+    }
+    if (!group.members.includes(user.email)) {
+
+    }
 }
 
 router.add("/", loadHome);
