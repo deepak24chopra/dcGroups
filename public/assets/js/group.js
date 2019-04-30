@@ -95,7 +95,30 @@ function groupDetail(groupId) {
         })
         .catch(function(error) {
             console.log(error);
+        });
+}
+
+function joinGroup(groupId) {
+    fetch("/api/group/joingroup", {
+            method: "post",
+            headers: {
+                "content-type": "application/json; charset=UTF-8"
+            },
+            body: `{groupId : "${group._id}", email: "${user.email}"}`
+        }).then(function(data) {
+            if (data.status == 404) {
+                console.log("API not found");
+                return;
+            }
+            return data;
+        }).then(function(data) {
+            return data.json();
+        }).then(function(data) {
+            group.members.push(user.email);
         })
+        .catch(function(error) {
+            console.log(error);
+        });
 }
 
 
